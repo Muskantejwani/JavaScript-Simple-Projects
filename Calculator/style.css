@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  background-color: #29a9c0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+#main-calc {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 40%;
+}
+
+.top {
+  background-color: #bcf3f7;
+  color:#000;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: clamp(1.8rem, 3vh, 3rem);
+}
+
+#display {
+  background-color: #c9fcfc;
+  color: rgb(8, 8, 8);
+  text-align: end;
+  padding: 10px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; 
+}
+
+#result{
+  background-color: #c9fcfc;
+  color: rgb(8, 8, 8);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; 
+  text-align: end;
+  padding: 10px 20px;
+}
+
+#buttons {
+  min-height: min(70vh, 70vw);
+  color: #fff9f9;
+  display: grid;
+  grid-template-rows: 1.1fr;
+  grid-area: buttons;
+}
+
+.bot-rows {
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+button {
+  border: none;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: clamp(0.5rem, 2.0vw, 2rem);
+  cursor: pointer;
+  transition: all ease 0.3s;
+  background-color: #c8f4fc;
+  
+}
+
+button:active {
+  transform: translateY(2px);
+  opacity: 60%;
+  transition: background 0s;
+}
+
+.btn-special {
+  color: #000;
+  color: #fff;
+  font-size: clamp(1rem, 3.2vw, 2rem);
+}
+#btn-equal {
+background-color: rgb(8, 136, 136);
+grid-column: span 2;
+color:#fff;
+}
+.aa{
+  background-color: #63e3fa;
+  color:#2f7380;
+  font-size: 3;
+}
+
+@media (max-width: 600px) {
+  #main-calc{
+      min-height: min(85vw, 85vh);
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+      grid-template-areas: 
+          "display"
+          "buttons"
+          "history";
+  }
+  
+  .top {
+      min-height: min(10vh,10vw);
+      font-size: clamp(0.9rem, 4.0vw, 1rem);;
+  }
+  #buttons {
+      min-height: 60vh;
+  }
+}
+
+@media (max-width:300px) {
+  button, .btn-rare, .btn-special {
+      font-size: clamp(0.5rem, 4.5vw, 2rem);
+  }
+  
+  .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: min(10vh,20vw);
+      font-size: clamp(0.9rem, 4.0vw, 1rem);;
+  }
+  #buttons {
+      min-height: 70vh;
+      row-gap: 0;
+  }
+  #main-calc {
+      row-gap: 0;
+  }
+}
