@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="form-container">
+            <h1>Registration</h1>
+            <form id="registrationForm" onsubmit="window.location.href='login.html'">
+                <div class="form-group">
+                    <label for="regUsername">Username:</label>
+                    <input type="text" id="regUsername" required>
+                    <span class="error" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <span><a class="link" href="login.html">Already register?</a></span>
+        </div>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <script
+      src="https://kit.fontawesome.com/9c206210e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="line"> To-Do List Web App</div>
+    <div class = "container">
+        <div class="row">
+            <div class="col-5 aa">
+              <form >
+                <input type="text" id = "myInput"  placeholder="Title" required>
+                <textarea type="text" id="des" placeholder="Description"></textarea>
+                <input class="btn btn-success" class="addBtn" onclick = "newElement()" value="Save">
+              </form>
+            </div>
+        
+<div class="col-7">
+  <div class="row">
+    <div class="col-3">
+       <p>Title</p>
+    </div>
+    <div class="col-6 oo">
+      <p>Description</p>
+   </div>
+   <div class="col-3">
+    <p>Delete</p>
+ </div>
+  </div>
+  <div class="row"><div class="col-12"><h1></h1></div></div>
+		<ul id = "myUL">
+			<!-- <li>
+				<div class="val">coffee</div>
+        <div class="val2">Make a coffee</div>
+			</li>
+			<li>
+				<div class="val">grocery</div>
+        				<div class="val2">Buy grocery</div>
+			</li> -->
+			
+		</ul>
+	</div>
+</div>
+</div>
+
+	<script src = "script.js"></script>
+
+
+  </body>
+</html>
